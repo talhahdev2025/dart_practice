@@ -1,5 +1,3 @@
-
-
 void main(List<String> arguments) {
   /*
   - datatypes
@@ -89,4 +87,30 @@ now this above list is unmodifyable/immutable
 
   var list25 = {}; // Map<dynamic,dynamic>
   print(list25.runtimeType);
+
+  
+
+  // Collection if
+  bool isLoggedIn = false;
+  List<String> menu = [
+    'home',
+    'about',
+    'setting',
+    if (isLoggedIn) 'Profile' else 'Guest',
+    switch (isLoggedIn) {
+      true => 'Profile',
+      false => 'Guest',
+    },
+  ];
+
+  //multiple conditions
+  int age = 18;
+
+  List<String> permissions = [
+    'read',
+    if (age > 18 && age < 21) 'smoke' else if (age > 21) 'drink' else 'vote',
+  ];
+  print(permissions);
+
+  //
 }
