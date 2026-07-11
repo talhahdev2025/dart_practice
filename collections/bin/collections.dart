@@ -121,7 +121,67 @@ now this above list is unmodifyable/immutable
   //Set
   Set<int> integerSet = {1, 1, 23, 344, 45, 7, 68, 34, 2, 1};
   print(integerSet);
+  //dart will create its Set<int> not map because we explicitly tell <int>
+  var thisIsSet = <int>{};
   // collection if in set
   var isAdmin = true;
   Set<Object> addAdmin = {isAdmin ? 'admin' : user};
+
+  // Collection for loop
+
+  // collection for in List<T>
+  List<int> numbers = [1, 2, 3, 4, 4, 5, 56, 6, 67, 7, 8, 8];
+  List<int> squareOfNumbers = [for (var i in numbers) i * i];
+  print(numbers);
+  print(squareOfNumbers);
+
+  List<int> evenOfNumbers = [
+    for (int i in numbers)
+      if (i % 2 == 0) i,
+  ];
+  print(evenOfNumbers);
+
+  List<String> fruits = ['apple', 'orange', 'banana', 'mango', 'watermelon'];
+  print('changes in fruits list \n${[for (var i in fruits) 'this is $i']}');
+  //collection for in Set<T>
+  List<int> duplicateNumbers = [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    43,
+    4,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    4,
+    3,
+    3,
+    4,
+  ];
+
+  print(
+    'Set without duplicate values \n${{for (var i in duplicateNumbers) i}}',
+  );
+
+  // collection for in Map<K,V>
+
+  List<String> myFruits = ['apple', 'orange', 'banana', 'mango', 'watermelon'];
+
+  Map<String, int> myFruitsMap = {
+    for (var fruit in myFruits) fruit: fruit.length,
+  };
+  print('myFruitsMap with fruit name length \n $myFruitsMap');
 }
