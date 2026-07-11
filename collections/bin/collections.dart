@@ -88,7 +88,13 @@ now this above list is unmodifyable/immutable
   var list25 = {}; // Map<dynamic,dynamic>
   print(list25.runtimeType);
 
-  
+  Map<String, int> emloyeeId = {'Ali': 23, 'talha': 32};
+  //collection if in Map
+  bool isIncludeEmail = true;
+  Map<String, Object> user = {
+    'name': 'Abu Bakar',
+    if (isIncludeEmail) 'email': 'laksdj@gmilac.com',
+  };
 
   // Collection if
   bool isLoggedIn = false;
@@ -112,5 +118,10 @@ now this above list is unmodifyable/immutable
   ];
   print(permissions);
 
-  //
+  //Set
+  Set<int> integerSet = {1, 1, 23, 344, 45, 7, 68, 34, 2, 1};
+  print(integerSet);
+  // collection if in set
+  var isAdmin = true;
+  Set<Object> addAdmin = {isAdmin ? 'admin' : user};
 }
